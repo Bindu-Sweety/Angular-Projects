@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "8c486f66-bb4c-4893-aa47-c17b6459d048"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "todo-list": {
+    "Projects": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/todo-list",
+            "outputPath": "dist/Projects",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,9 +31,13 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -65,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-list:build"
+            "browserTarget": "Projects:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-list:build:production"
+              "browserTarget": "Projects:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-list:build"
+            "browserTarget": "Projects:build"
           }
         },
         "test": {
@@ -113,16 +120,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "todo-list:serve"
+            "devServerTarget": "Projects:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "todo-list:serve:production"
+              "devServerTarget": "Projects:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "todo-list"
+  "defaultProject": "Projects"
 }

@@ -1,0 +1,13 @@
+<div>
+<div class="container">
+ <div class="progress-container" >
+  <div class="progress" id="progress">
+
+  </div>
+  <div class="circle active" *ngFor = "let circle of circles; let i = index"
+  [ngClass]="currentActive === i ? 'active' : ''">{{circle.id}}</div>
+ </div>
+ <button class="btn" id="prev" disabled (click)="prev()">Prev</button>
+ <button class="btn" id="next" (click)="next()">Next</button>
+</div>
+</div>

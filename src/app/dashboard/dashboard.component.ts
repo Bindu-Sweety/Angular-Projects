@@ -13,11 +13,11 @@ projects = [
 },
   {
   name:'hidden search widget',
-  link:''
+  link:'/project 2'
 },
   {
   name:'progress steps',
-  link:''
+  link:'/project 3'
 },
   {
   name:'todo list',

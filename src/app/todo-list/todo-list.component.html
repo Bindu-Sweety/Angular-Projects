@@ -1,0 +1,13 @@
+<div class="todo-list">
+<h1>todos</h1>
+<form id="form">
+ <input type="text" class="input" id="input" placeholder="Enter your todos" autocomplete="off"
+  (click)="addTodo()">
+
+ <ul class="todos" id="todos">
+  <li *ngFor="let todo of todoArray">{{todo}}
+  </li>
+ </ul>
+</form>
+<small>Left click to toggle completed. <br> Right click to delete todo</small>
+</div>

@@ -1,13 +1,18 @@
 <div>
 <div class="container">
  <div class="progress-container" >
-  <div class="progress" id="progress">
+  <div class="progress" id="progress" [style.width.%] = "dynamicLine">
 
   </div>
-  <div class="circle active" *ngFor = "let circle of circles; let i = index"
-  [ngClass]="currentActive === i ? 'active' : ''">{{circle.id}}</div>
+  <div class="circle" *ngFor = "let circle of circles; let i = index"
+  [ngClass]="currentActive >= i ? 'active' : ''">{{circle.id}}</div>
  </div>
- <button class="btn" id="prev" disabled (click)="prev()">Prev</button>
- <button class="btn" id="next" (click)="next()">Next</button>
+
+<div id="btn">
+ <button class="btn" id="prev" [disabled]="currentActive === 0" (click)="prev()">Prev</button>
+ <button class="btn" id="next" [disabled]="circles.length === currentActive+1" (click)="next()">Next</button>
 </div>
 </div>
+
+</div>
+

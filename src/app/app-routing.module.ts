@@ -1,3 +1,4 @@
+import { TodoListComponent } from './todo-list/todo-list.component';
 import { ProgressStepsComponent } from './progress-steps/progress-steps.component';
 import { HiddenSearchWidgetComponent } from './hidden-search-widget/hidden-search-widget.component';
 import { ExpandingCardsComponent } from './expanding-cards/expanding-cards.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path:'project 1', component:ExpandingCardsComponent },
   { path:'project 2', component:HiddenSearchWidgetComponent },
   { path:'project 3', component:ProgressStepsComponent },
+  { path:'project 4', component:TodoListComponent },
 ];
 
 @NgModule({

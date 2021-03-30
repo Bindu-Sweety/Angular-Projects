@@ -33,7 +33,6 @@ div {
   background: #358bfb;
   transform: translateY(-50%);
   width: 0%;
-  z-index: -1;
   position: absolute;
   top: 50%;
   left: 0;
@@ -42,6 +41,7 @@ div {
 }
 .circle {
   background: #fff;
+  z-index: 1;
   color: #999;
   border-radius: 50%;
   height: 30px;
@@ -55,6 +55,9 @@ div {
 .circle.active {
   border-color: #358bfb;
 }
+#btn {
+  margin-top: 80px;
+}
 .btn {
   background: #358bfb;
   border: 0;
@@ -62,6 +65,7 @@ div {
   border-radius: 6px;
   cursor: pointer;
   padding: 8px 30px;
+  display: block;
   margin: 5px;
   font-size: 14px;
 }
